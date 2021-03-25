@@ -10,12 +10,11 @@ html {
 body {
   padding: 0;
   margin: 0;
-  background-image: linear-gradient(#615dad, #ffc8da);
+  background-image: linear-gradient(#615dad, #ffc8da, white);
   background-repeat: no-repeat;
-  height: 100vh;
 }
 
-header {
+.main {
   background-color: #283e50;
   background-image: url('uvodni.jpg');
   background-size: contain;
@@ -26,7 +25,14 @@ header {
   border-radius: 5px;
 }
 
-header h1 {
+.main--pravidla {
+  background-color: #283e50;
+  width: 360px;
+  margin: 60px auto;
+  border-radius: 5px;
+}
+
+.main h1 {
   color: white;
   text-align: center;
   font-family: 'Lobster', cursive;
@@ -35,7 +41,16 @@ header h1 {
   padding: 250px 20px 0px 20px;
 }
 
-header p {
+.main--pravidla h1 {
+  color: white;
+  text-align: center;
+  font-family: 'Lobster', cursive;
+  font-size: 3rem;
+  font-weight: 100;
+  padding: 20px 20px 0px 20px;
+}
+
+.main p {
   color: white;
   text-align: center;
   font-family: 'Open Sans', sans-serif;
@@ -43,6 +58,41 @@ header p {
   font-weight: 100;
   line-height: 1.8;
   padding: 0px 20px 30px 20px;
+}
+
+.main--pravidla li {
+  color: white;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 100;
+  line-height: 1.8;
+  padding: 0px 20px 0px 20px;
+}
+
+.main--pravidla li img {
+  filter: invert(100%);
+  width: 1em;
+  height: 1em;
+  margin: 0 5px;
+}
+
+figure {
+  display: flex;
+  flex-flow: column;
+  padding: 5px;
+  max-width: 80%;
+  margin: auto;
+}
+figcaption {
+  color: white;
+  font-family: 'Open Sans', sans-serif;
+  font-style: italic;
+  font-size: 0.9rem;
+  font-weight: 100;
+  padding: 3px 3px 20px 3px;
+  text-align: center;
+  display: block;
+  height: 80px;
 }
 
 nav a {
@@ -70,4 +120,29 @@ a.prav:hover {
 
 a.start:hover {
   background-color: #0090e9;
+}
+
+@media only screen and (min-width: 400px) and (max-width: 768px) {
+  .main--pravidla {
+    min-width: 90%;
+  }
+  figure {
+    max-width: 50%;
+    min-width: 278px;
+  }
+}
+
+@media only screen and (min-width: 769px) {
+  .main--pravidla {
+    min-width: 750px;
+  }
+
+  .pravidlaObrazky {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  figure {
+    max-width: 45%;
+  }
 }
