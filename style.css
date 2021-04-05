@@ -10,38 +10,25 @@ html {
 body {
   padding: 0;
   margin: 0;
-  background-image: linear-gradient(#615dad, #ffc8da, white);
+  background-image: linear-gradient(#615dad, #ffc8da);
   background-repeat: no-repeat;
 }
 
+/*úvodní strana*/
+
 .main {
   background-color: #283e50;
-  background-image: url('uvodni.jpg');
-  background-size: contain;
-  background-repeat: no-repeat;
-
   width: 360px;
   margin: 60px auto;
   border-radius: 5px;
 }
 
-.main--pravidla {
-  background-color: #283e50;
-  width: 360px;
-  margin: 60px auto;
+.main img {
+  width: 100%;
   border-radius: 5px;
 }
 
 .main h1 {
-  color: white;
-  text-align: center;
-  font-family: 'Lobster', cursive;
-  font-size: 3rem;
-  font-weight: 100;
-  padding: 250px 20px 0px 20px;
-}
-
-.main--pravidla h1 {
   color: white;
   text-align: center;
   font-family: 'Lobster', cursive;
@@ -58,41 +45,6 @@ body {
   font-weight: 100;
   line-height: 1.8;
   padding: 0px 20px 30px 20px;
-}
-
-.main--pravidla li {
-  color: white;
-  font-family: 'Open Sans', sans-serif;
-  font-size: 0.9rem;
-  font-weight: 100;
-  line-height: 1.8;
-  padding: 0px 20px 0px 20px;
-}
-
-.main--pravidla li img {
-  filter: invert(100%);
-  width: 1em;
-  height: 1em;
-  margin: 0 5px;
-}
-
-figure {
-  display: flex;
-  flex-flow: column;
-  padding: 5px;
-  max-width: 80%;
-  margin: auto;
-}
-figcaption {
-  color: white;
-  font-family: 'Open Sans', sans-serif;
-  font-style: italic;
-  font-size: 0.9rem;
-  font-weight: 100;
-  padding: 3px 3px 20px 3px;
-  text-align: center;
-  display: block;
-  height: 80px;
 }
 
 nav a {
@@ -120,6 +72,163 @@ a.prav:hover {
 
 a.start:hover {
   background-color: #0090e9;
+}
+
+/*pravidla*/
+
+.main--pravidla {
+  background-color: #283e50;
+  width: 360px;
+  margin: 60px auto;
+  border-radius: 5px;
+}
+
+.main--pravidla h1 {
+  color: white;
+  text-align: center;
+  font-family: 'Lobster', cursive;
+  font-size: 3rem;
+  font-weight: 100;
+  padding: 20px 20px 0px 20px;
+}
+
+.main--pravidla li {
+  color: white;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 100;
+  line-height: 1.8rem;
+  padding: 0px 20px 0px 20px;
+}
+
+.main--pravidla li img {
+  filter: invert(100%);
+  width: 1em;
+  height: 1em;
+  margin: 0 5px;
+}
+
+figure {
+  display: flex;
+  flex-flow: column;
+  padding: 5px;
+  max-width: 80%;
+  margin: auto;
+}
+
+figcaption {
+  color: white;
+  font-family: 'Open Sans', sans-serif;
+  font-style: italic;
+  font-size: 0.9rem;
+  font-weight: 100;
+  padding: 3px 3px 20px 3px;
+  text-align: center;
+  display: block;
+  height: 80px;
+}
+
+/*hra*/
+
+.main--hra {
+  max-width: 80vmin;
+  margin: 0px auto;
+  border-radius: 5px;
+}
+
+.main--hra h1 {
+  color: white;
+  text-align: center;
+  font-family: 'Lobster', cursive;
+  font-size: 3rem;
+  font-weight: 100;
+  padding: 20px 0px;
+  margin: 0;
+}
+
+.menuHra {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav--hra {
+  display: flex;
+  flex-direction: row;
+}
+
+.hra--domu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 2rem;
+  height: 1.8rem;
+  background-color: #1fcca4;
+  border-radius: 10%;
+  margin-right: 10%;
+}
+
+a.hra--domu:hover,
+a.hra--domu:focus {
+  background-color: #1cbb96;
+}
+
+.hra--start {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 2rem;
+  height: 1.8rem;
+  background-color: #0197f6;
+  border-radius: 10%;
+}
+
+a.hra--start:hover,
+a.hra--start:focus {
+  background-color: #0090e9;
+}
+
+.nav--hra a img {
+  width: 65%;
+}
+
+.menuHra p {
+  color: white;
+  text-align: left;
+  font-family: sans-serif;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+
+.imgHra {
+  filter: invert(100%);
+  height: 1.2rem;
+  margin-bottom: -3%;
+}
+
+.hraciPole {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 20px;
+}
+
+.hraciPole button {
+  width: 10%;
+  height: 0;
+  padding-top: calc(10% - 3px);
+  margin: 0;
+  border: solid 0.8px black;
+  opacity: 0.5;
+}
+
+.hraciPole button:hover,
+.hraciPole button:focus {
+  background-color: #d4c7e1;
 }
 
 @media only screen and (min-width: 400px) and (max-width: 768px) {
