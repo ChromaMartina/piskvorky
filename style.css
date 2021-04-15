@@ -11,8 +11,8 @@ body {
   padding: 0;
   margin: 0;
   background-image: linear-gradient(#615dad, #ffc8da);
-  background-repeat: no-repeat;
-  height: 100vh;
+  background-attachment: fixed;
+  min-height: 100vh;
 }
 
 /*úvodní strana*/
@@ -149,9 +149,34 @@ figcaption {
 
 .menuHra {
   display: flex;
-  flex-direction: row;
+  margin: 0 auto 20px;
   justify-content: space-between;
   align-items: center;
+}
+
+.hrac {
+  font-size: 1.5em;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-family: sans-serif;
+  color: #ffffff;
+}
+
+.imgHra {
+  display: inline-block;
+  filter: invert(100%);
+  height: 1.5rem;
+  width: 1.5rem;
+  margin-bottom: -3%;
+  background-size: cover;
+}
+
+.imgHra--cross {
+  background-image: url('cross.svg');
+}
+
+.imgHra--circle {
+  background-image: url('circle.svg');
 }
 
 .nav--hra {
@@ -203,12 +228,6 @@ a.hra--start:focus {
   font-weight: 400;
 }
 
-.imgHra {
-  filter: invert(100%);
-  height: 1.2rem;
-  margin-bottom: -3%;
-}
-
 .hraciPole {
   display: flex;
   flex-wrap: wrap;
@@ -218,18 +237,37 @@ a.hra--start:focus {
   padding-bottom: 20px;
 }
 
-.hraciPole button {
+.pole {
   width: 10%;
   height: 0;
   padding-top: calc(10% - 3px);
   margin: 0;
   border: solid 0.8px black;
-  opacity: 0.5;
+  background-color: rgba(255, 255, 255, 0.4);
+  cursor: pointer;
+  background-size: 0%;
+  transition: ease-in 0.15s background-size;
 }
 
-.hraciPole button:hover,
-.hraciPole button:focus {
-  background-color: #d4c7e1;
+.pole:hover,
+.pole:focus {
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+.pole--cross {
+  background-image: url('cross.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 75%;
+  cursor: default;
+}
+
+.pole--circle {
+  background-image: url('circle.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 75%;
+  cursor: default;
 }
 
 @media only screen and (min-width: 400px) and (max-width: 768px) {
