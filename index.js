@@ -6,10 +6,6 @@ const poleElements = document.querySelectorAll('.pole');
 
 poleElements.forEach((poleElement, i) => {
   poleElement.addEventListener('click', () => {
-    /*if (symbolDoPole(poleElement)) {
-      return;
-    }*/
-
     if (player === 'circle') {
       poleElement.classList.add('pole--circle');
       player = 'cross';
@@ -35,9 +31,6 @@ poleElements.forEach((poleElement, i) => {
 
     poleElement.disabled = true;
     symbolHrac();
-
-    /*isWinningMove(poleElement);
-    console.log(isWinningMove(poleElement));*/
   });
 });
 
@@ -121,32 +114,6 @@ const isWinningMove = (poleElement) => {
   }
 
   if (inColumn >= vyherniSymboly) {
-    return true;
-  }
-
-  let inDiagonalA = 1; //diagonala vlevo nahoře, vpravo dole
-
-  i = origin.diagonalA; // vlevo nahoru
-  while (
-    i > 0 &&
-    symbol ===
-      symbolDoPole(najdiPole(origin.row, i - 1 && i - 1, origin.column))
-  ) {
-    inDiagonalA++;
-    i--;
-  }
-
-  i = origin.diagonalA; //vpravo dolu
-  while (
-    i < hraciPole - 1 &&
-    symbol ===
-      symbolDoPole(najdiPole(origin.row, i + 1 && i + 1, origin.column))
-  ) {
-    inDiagonalA++;
-    i++;
-  }
-
-  if (inDiagonalA >= vyherniSymboly) {
     return true;
   }
 
